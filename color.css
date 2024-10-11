@@ -1,7 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+
 
 html,
 body,
@@ -19,7 +16,6 @@ h6,
 p,
 blockquote,
 pre,
-a,
 abbr,
 acronym,
 address,
@@ -141,12 +137,12 @@ body {
     width: 100vw;
     position: relative;
     box-sizing: border-box;
-    background-image: url("./assets/background.jpg");
-    background-position: center;
+    background-image: url("./assets/otherBackground.jpg");
+    background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
-    background-color: rgba(15, 34, 49, 1);
+    background-color: #e4e4e4;
 }
 
 @font-face {
@@ -154,26 +150,18 @@ body {
     src: url("./assets/aptly/Aptly-Medium.otf");
 }
 
-h1 {
-    font-family: myFirstFont;
-    font-size: 60px;
-    color: white;padding: 2%;
-}
+
 
 h3 {
-    font-family: myFirstFont;
-    color: #cd0e2d;
-    text-transform: uppercase;
-    font-size: 35px;
-    font-weight: bold;
-    margin-bottom:  30px;
+    font-family: myFirstFont; font-weight: bolder; letter-spacing: 1.5px;
+    font-size: 40px; color: #c5c5c5; text-transform: uppercase;
 }
 
 .shader {
     height: 100vh;
     width: 100vw;
-    background: rgb(15, 34, 49);
-    background: linear-gradient(0deg, rgba(15, 34, 49, 1) 32%, rgba(15, 34, 49, 0.7139648095566351) 65%, rgba(15, 34, 49, 0.4674662101168593) 83%, rgba(15, 34, 49, 0) 100%);
+    background: #e4e4e4;
+    background: linear-gradient(0deg, #0070f96b, #0a1a70 );
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -183,143 +171,97 @@ h3 {
     z-index: -1;
 }
 
-.mission {
-    width: 700px;
-    border: white 0px solid;
-    margin-top: 7%; left: 0; right: 0;
-    margin-left: auto;
-    margin-right: auto; color: white;
-    font-size: 20px;
+.background {
+    position: absolute;
+    width: 100%; height: 20%;
+    background: white;
+    bottom: 0;
+}
+
+.main {
+    position: absolute;
+    bottom: 350px;
+    width: 900px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.whiteArea {
+    background-color: white; text-align: left; height: fit-content;
+    filter: drop-shadow(0px 16px 20px #06122a64);border-radius: 20px;
+    position: absolute; padding-bottom: 30px;  padding-top: 30px;
+    margin-top: 30px;
+}
+
+.whiteArea svg {
+    border: red solid 0px;
+    height: 80px; width: 80px;
+    margin-bottom: 30px;
+    fill: #cccccc;
+}
+
+.whiteArea p {
+    margin-top: 15px;
     font-family: sans-serif;
+    color: #828282; font-weight: bold;
 }
 
-.MainBtn {
-    background-color: #cd0e2d;
-    padding: 10px 30px;
-    text-align: center;
-    border-radius: 20px 0px 20px 0px;
-    text-decoration: none;
-    color: inherit;
+.whiteArea .left {
+    float: left; width: calc(49% - 30px); height: 100%; padding-left: 30px;
 }
 
-.MainBtn i,
-.SubBtn i {
-    margin-left: 20px;
+.whiteArea .right {
+    border-left: 1px solid grey;
+    float: right; width: calc(50% - 80px); height: 100%; padding-left: 50px;
+    padding-right :30px;
+}
+
+.main a {
+    position: relative;
+    top: 0px;
+    transition: all .5s ;
+}
+
+.main a i {
+    margin-left: 10px;
+}
+
+.support {
+    background: white; color: #0258f5;
+    padding: 10px 40px; font-size: 30px;
+    border-radius: 50px; text-decoration: none;
+    font-weight: bolder; font-family: sans-serif;
+}
+
+.connect {
+    color: white; background: #0258f5;
+    padding: 10px 40px; font-size: 30px;
+    border-radius: 50px; text-decoration: none;
+    font-weight: bolder; font-family: sans-serif;
+    margin-left: 10px;
 }
 
 
-.SubBtn {
-    margin-left: 30px;
-    background-color: #cd0e2e23;
-    padding: 10px 30px; 
-    text-align: center;
-    border-radius: 0px 20px 0px 20px;
-    text-decoration: none;
-    color: inherit;color: #ffffff;
-    border: #cd0e2d 1px solid;
+.main a:hover {
+    top: -5px;
+    transition: all .5s !important;
+    cursor: pointer;
 }
 
-
-.vales {
-    width: 700px;
-    border: white 0px solid;
-    margin-top: 15px; left: 0; right: 0;
-    margin-left: auto;
-    margin-right: auto; color: white;
+a:hover a {
+    opacity: 40%;
 }
 
-.vales .right,
-.vales .left {
-    border: white 0px solid;
-    width: calc(48% - 40px); text-align: left;
-    font-size: 20px;
-    font-family: sans-serif;
-    padding-left: 40px;
+h1 {
+    font-family: myFirstFont;
+    font-size:  80px;
+    color: white;padding: 2%;
 }
-
-.vales .right {
-    float: right;
-    border-left: gray 1px solid;
-    
-}
-
-.vales .left {
-    float: left;
-}
-
-@media screen and (max-width: 1200px) {
-    h1 {
-        font-family: myFirstFont;
-        font-size: 30px;
-        background: rgba(0, 0, 0, 0.244);
-        color: white;padding: 2%;
-    }
-
-    .mission {
-        width: 90%;
-        border: white 0px solid;
-        margin-top: 7%; left: 0; right: 0;
-        margin-left: auto;
-        margin-right: auto; color: white;
-        font-size: 20px;
-        font-family: sans-serif;
-        text-align: center;
-    }
-
-    .vales {
-        width: 90%;margin-left: auto;
-        margin-right: auto;
-    }
-
-    .vales .right,
-    .vales .left {
-        border: white 0px solid;
-        width: 45%; text-align: left;
-        font-size: 15px;
-        font-family: sans-serif;
-        padding-left: 10px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-
-    .MainBtn {
-        background-color: #cd0e2d;
-        padding: 10px 30px;
-        text-align: center;
-        border-radius: 20px 20px 0px 0px;
-        text-decoration: none;
-        color: inherit;
-        width: 85%;
-        display: block;margin-left: auto;
-        margin-right: auto;
-        font-size: 25px;
-        text-align: left;
-    }
-    
-    .MainBtn i,
-    .SubBtn i {
-        margin-left: 20px;
-        float:right;
-    }
-    
-    
-    .SubBtn {
-
-        display: block;
-        margin-left: unset;
-        background-color: #cd0e2e23;
-        padding: 10px 30px; 
-        text-align: center;
-        border-radius: 0px 0px 20px 20px;
-        text-decoration: none;
-        color: inherit;color: #ffffff;
-        border: #cd0e2d 1px solid;
-        width: 85%; margin-left: auto;
-        margin-right: auto;
-        margin-top: 10px;
-        font-size: 25px;
-        text-align: left;
-    }
-    
+ 
+h5 {
+    width: 40%; color: white;
+    left: 0; right: 0; margin: 0 auto;
+    white-space: wrap;
+    font-family: sans-serif; font-size: 20px;
 }
