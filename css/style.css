@@ -240,16 +240,7 @@ h1, h2, h3, h4, h5, h6, figure {
   font-weight: bolder;
 }
 
-.mainBtn {
-  padding: 15px 15px !important;
-  margin: 15px 15px !important;
-  border: 1px #ffd00031 solid !important;
-  background: #ffd00000 !important;
-}
 
-.mainBtn:hover {
-  border: 1px #ffd000cd solid !important;
-}
 
 .fh5co-nav ul li.has-dropdown:hover a, .fh5co-nav ul li.has-dropdown:focus a {
   color: #fff;
@@ -812,7 +803,32 @@ h1, h2, h3, h4, h5, h6, figure {
   .fh5co-tabs .class-schedule li {
     width: 50%;
   }
+
+  .mainBtn {
+    padding: unset !important ;
+    margin: unset !important ;
+    border: unset !important  ;
+    background: unset !important ;
+  }
+  
+  .mainBtn:hover {
+    border: 1px #ffd000cd solid ;
+  }
 }
+
+@media screen and (min-width: 768px) {
+  .mainBtn {
+    padding: 15px 15px !important;
+    margin: 15px 15px !important;
+    border: 1px #ffd00031 solid !important;
+    background: #ffd00000 !important;
+  }
+  
+  .mainBtn:hover {
+    border: 1px #ffd000cd solid ;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .fh5co-tabs .class-schedule li {
     width: 100%;
